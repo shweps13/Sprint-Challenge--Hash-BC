@@ -28,7 +28,7 @@ def proof_of_work(last_proof):
     guess = f"{last_proof}".encode()
     prev_hash = hashlib.sha256(guess).hexdigest()
 
-    while valid_proof(block_string, proof) is False:
+    while valid_proof(prev_hash, proof) is False:
         proof += 1
 
     print("Proof found: " + str(proof) + " in " + str(timer() - start))
