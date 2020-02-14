@@ -5,6 +5,23 @@ from hashtables import (HashTable,
                         hash_table_retrieve,
                         hash_table_resize)
 
+"""
+input: weights = [ 4, 6, 10, 15, 16 ], length = 5, limit = 21
+output: [ 3, 1 ]  # since these are the indices of weights 15 and 6 whose sum equals 21
+
+limit => limit of 2 weights
+output: [index of highel weight, index of lover weight]
+
+limit = 21
+weights    [ 4, 6, 10, 15, 16 ]
+indexes    | 0| 1| 2 | 3 |  4 |
+return: [3,1]
+
+15 + 6 = 21
+higher weight + lover weight = limit
+"""
+
+
 
 def get_indices_of_item_weights(weights, length, limit):
     ht = HashTable(16)
