@@ -19,6 +19,12 @@ return: [3,1]
 
 15 + 6 = 21
 higher weight + lover weight = limit
+
+we cannot use nested loops, so we need to use hashtables insteat
+
+1) loop thru weights limit - weight = difference and find the index
+2) insert to hashtable hash_table_insert
+3) compare weight value - in weight list to hashtable hash_table_retrieve
 """
 
 
